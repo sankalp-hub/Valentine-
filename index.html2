@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine Quiz</title>
+  <style>
+    body {
+      background-color: #faf3e0;
+      font-family: 'Poppins', Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      color: #d95d39;
+      font-size: 2.5rem;
+    }
+
+    .question {
+      margin: 20px 0;
+      font-size: 1.2rem;
+      color: #4a4a4a;
+    }
+
+    .options {
+      margin: 10px 0;
+    }
+
+    button {
+      background-color: #d95d39;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #bc4a2e;
+    }
+  </style>
+</head>
+<body>
+  <h1>Discover Your Dream Partner</h1>
+  <form id="quizForm">
+    <div class="question">
+      <label>What is their ideal hair color?</label><br>
+      <div class="options">
+        <input type="radio" name="hair" value="Black"> Black<br>
+        <input type="radio" name="hair" value="Brown"> Brown<br>
+        <input type="radio" name="hair" value="Blonde"> Blonde<br>
+        <input type="radio" name="hair" value="Red"> Red<br>
+      </div>
+    </div>
+
+    <!-- Add more questions here -->
+
+    <button type="submit">See Results</button>
+  </form>
+
+  <script>
+    document.getElementById('quizForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert("Quiz submitted! Results coming soon!");
+      // Redirect to results page
+      window.location.href = "results.html";
+    });
+  </script>
+</body>
+</html>
