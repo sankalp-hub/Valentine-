@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine Quiz</title>
+  <style>
+    body {
+      background-color: #fef6e4;
+      font-family: 'Poppins', Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      color: #d95d39;
+      font-size: 3rem;
+      margin-top: 20px;
+    }
+
+    p {
+      color: #4a4a4a;
+      font-size: 1.2rem;
+    }
+
+    .button {
+      background-color: #d95d39;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #bc4a2e;
+    }
+
+    footer {
+      margin-top: 50px;
+      color: #4a4a4a;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Your Valentine Quiz!</h1>
+  <p>Click the button below to set the mood with a romantic tune, or start your quiz to discover your dream partner!</p>
+  <button class="button" onclick="playSong()">Play 'Janam Janam'</button>
+  <button class="button" onclick="startQuiz()">Start Quiz</button>
+  <audio id="romanticSong" src="https://example.com/janam-janam.mp3"></audio>
+
+  <footer>
+    <p>Made with ❤️ for Valentine's Day</p>
+  </footer>
+
+  <script>
+    function playSong() {
+      const song = document.getElementById('romanticSong');
+      if (song.paused) {
+        song.play();
+        alert("Playing 'Janam Janam' 🎶");
+      } else {
+        song.pause();
+        alert("Music Paused");
+      }
+    }
+
+    function startQuiz() {
+      // Redirect to quiz page
+      window.location.href = "quiz.html";
+    }
+  </script>
+</body>
+</html>
